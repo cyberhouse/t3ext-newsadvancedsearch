@@ -22,11 +22,6 @@ namespace GeorgRinger\Newsadvancedsearch\Controller;
 class SearchController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
-	 * @var \Tx_News_Domain_Repository_NewsRepository
-	 */
-	protected $newsRepository;
-
-	/**
 	 * @var \GeorgRinger\Newsadvancedsearch\Domain\Repository\TypeRepository
 	 */
 	protected $typeRepository;
@@ -59,26 +54,9 @@ class SearchController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
 			$search = $this->objectManager->get('GeorgRinger\\Newsadvancedsearch\\Domain\\Model\\Dto\\Search');
 		}
 
-		/** @var \GeorgRinger\Newsadvancedsearch\Domain\Model\Dto\Demand $demand */
-		$demand = $this->objectManager->get('GeorgRinger\\Newsadvancedsearch\\Domain\\Model\\Dto\\Demand');
-		$demand->setLocations($search->getLocations());
-		$demand->setTypes($search->getTypes());
-		$demand->setSubject($search->getSubject());
-
-		$newsItems = $this->newsRepository->findDemanded($demand);
-
 		$this->view->assignMultiple(array(
 			'search' => $search,
-			'demand' => $demand,
-			'news' => $newsItems
 		));
-	}
-
-	/**
-	 * @param \Tx_News_Domain_Repository_NewsRepository $newsRepository
-	 */
-	public function injectNewsRepository(\Tx_News_Domain_Repository_NewsRepository $newsRepository) {
-		$this->newsRepository = $newsRepository;
 	}
 
 	/**

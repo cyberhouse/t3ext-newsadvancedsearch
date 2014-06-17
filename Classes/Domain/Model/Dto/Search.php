@@ -127,6 +127,4 @@ class Search extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		return $this->startdatum;
 	}
 
-
-
 }

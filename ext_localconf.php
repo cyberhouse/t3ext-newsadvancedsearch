@@ -14,9 +14,3 @@ if (!defined('TYPO3_MODE')) {
 	)
 );
 
-
-/**
- * Hook for EXT:news
- */
-$GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['Domain/Repository/AbstractDemandedRepository.php']['findDemanded'][$_EXTKEY]
-	= 'EXT:' . $_EXTKEY . '/Classes/Hooks/Repository.php:GeorgRinger\\Newsadvancedsearch\\Hooks\\Repository->modify';
