@@ -1,0 +1,43 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+
+	<sheets>
+		<!--
+			################################
+			  SHEET General Settings
+			################################
+		-->
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:news/Resources/Private/Language/locallang_be.xml:flexforms_tab.settings</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<!-- View -->
+					<switchableControllerActions>
+						<TCEforms>
+							<label>LLL:EXT:news/Resources/Private/Language/locallang_be.xml:flexforms_general.mode</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="1">
+										<numIndex index="0">Form</numIndex>
+										<numIndex index="1">Search->form</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">Result</numIndex>
+										<numIndex index="1">Search->result</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

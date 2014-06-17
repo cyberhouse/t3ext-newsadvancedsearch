@@ -1,0 +1,11 @@
+
+plugin.tx_newsadvancedsearch {
+	view {
+		templateRootPath = {$plugin.tx_newsadvancedsearch.view.templateRootPath}
+		partialRootPath = {$plugin.tx_newsadvancedsearch.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_newsadvancedsearch.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_newsadvancedsearch.persistence.storagePid}
+	}
+}

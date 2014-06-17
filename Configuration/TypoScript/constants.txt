@@ -1,0 +1,15 @@
+
+plugin.tx_newsadvancedsearch {
+	view {
+		# cat=plugin.tx_newsadvancedsearch/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:newsadvancedsearch/Resources/Private/Templates/
+		# cat=plugin.tx_newsadvancedsearch/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:newsadvancedsearch/Resources/Private/Partials/
+		# cat=plugin.tx_newsadvancedsearch/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:newsadvancedsearch/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_newsadvancedsearch//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

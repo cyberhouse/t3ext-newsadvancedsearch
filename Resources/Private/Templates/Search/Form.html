@@ -1,0 +1,15 @@
+<h1>Form</h1>
+
+<f:form object="{search}" name="search">
+	<fieldset>
+		Subject: <f:form.textfield property="subject"/>
+		<br>
+		Locations: <f:form.select property="locations" multiple="1" options="{locations}" optionLabelField="title"/>
+		<br>
+		Types: <f:form.select property="types" multiple="1" options="{types}" optionLabelField="title"/>
+		<br>
+
+		<f:form.submit value="submit"/>
+	</fieldset>
+</f:form>
+
